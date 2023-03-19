@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.Experimentation_MultipleController">
+   <children>
+      <ImageView fitHeight="668.0" fitWidth="886.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@imageee.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="taille_population" layoutX="211.0" layoutY="91.0" prefHeight="43.0" prefWidth="165.0" promptText="Size_population">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="pop_size" layoutX="19.0" layoutY="91.0" prefHeight="34.0" prefWidth="144.0" text="Population size:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="#fffafa" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="nbGener" layoutX="211.0" layoutY="156.0" prefHeight="43.0" prefWidth="171.0" promptText="Number_generations">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="genr" layoutX="14.0" layoutY="148.0" prefHeight="51.0" prefWidth="194.0" text="Number of generations:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="#fffdfd" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="pm" layoutX="208.0" layoutY="221.0" prefHeight="43.0" prefWidth="171.0" promptText="Proba_mutation">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="pc" layoutX="208.0" layoutY="284.0" prefHeight="43.0" prefWidth="171.0" promptText="Proba_crois_over">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="mut" layoutX="13.0" layoutY="225.0" prefHeight="34.0" prefWidth="194.0" text="Mutation probability:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="cros" layoutX="13.0" layoutY="282.0" prefHeight="34.0" prefWidth="194.0" text="Cross-over probability:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="temp_max" layoutX="502.0" layoutY="87.0" prefHeight="43.0" prefWidth="165.0" promptText="Initial_Temperature">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="run" layoutX="451.0" layoutY="380.0" mnemonicParsing="false" onAction="#RunAction" prefHeight="44.0" prefWidth="208.0" style="-fx-background-radius: 20;" text="Choose_Benchmarks">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="initialise" layoutX="226.0" layoutY="380.0" mnemonicParsing="false" onAction="#InitialiseAction" prefHeight="44.0" prefWidth="194.0" style="-fx-background-radius: 20;" text="Initialise">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="110.0" layoutY="14.0" prefHeight="51.0" prefWidth="276.0" text="Genetic parameters:" underline="true">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.15238095238095234">
+               <stops>
+                  <Stop color="#eb980a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="temp_min" layoutX="502.0" layoutY="156.0" prefHeight="43.0" prefWidth="165.0" promptText="Final_Temperature">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nbr_ite" layoutX="502.0" layoutY="221.0" prefHeight="43.0" prefWidth="165.0" promptText="Iterrations of one bearing">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="alpha" layoutX="502.0" layoutY="282.0" prefHeight="43.0" prefWidth="165.0" promptText="Cooling_rate">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="initial_temp" layoutX="682.0" layoutY="83.0" prefHeight="51.0" prefWidth="171.0" text="Initial_Temperature" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="final_temp" layoutX="685.0" layoutY="152.0" prefHeight="51.0" prefWidth="165.0" text="Final_Temperature">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="iteration" layoutX="684.0" layoutY="213.0" prefHeight="51.0" prefWidth="202.0" text="Iterrations of one bearing">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="cool_rate" layoutX="684.0" layoutY="283.0" prefHeight="44.0" prefWidth="133.0" text="Cooling_rate">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="label_SA" alignment="CENTER" layoutX="443.0" layoutY="14.0" prefHeight="50.0" prefWidth="414.0" text="Simulated annealing parameters:" underline="true">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.27222222222222225" centerY="0.7333333333333334" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#ebb41e" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="returnRnd" layoutX="59.0" layoutY="607.0" mnemonicParsing="false" onAction="#returnRndAct" prefHeight="34.0" prefWidth="126.0" text="Return">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="vider" layoutX="672.0" layoutY="607.0" mnemonicParsing="false" onAction="#Vider_Result" prefHeight="34.0" prefWidth="159.0" text="Overwrite result files">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

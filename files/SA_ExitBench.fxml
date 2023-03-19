@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="654.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.SA_ExitBenchController">
+ <children>
+      <ImageView fitHeight="661.0" fitWidth="743.0" layoutY="-2.0" opacity="0.68" pickOnBounds="true">
+         <image>
+            <Image url="@Sannelling.gif" />
+         </image></ImageView>
+      <Label fx:id="label_SA" alignment="CENTER" layoutX="157.0" prefHeight="50.0" prefWidth="478.0" text="Simulated Annealing " underline="true">
+         <font>
+            <Font name="Times New Roman" size="46.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.5857142857142857" startY="0.40476190476190477">
+               <stops>
+                  <Stop color="#1a1100" />
+                  <Stop color="#2c2d2f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="Run" layoutX="477.0" layoutY="111.0" mnemonicParsing="false" onAction="#RunRecuitAction" prefHeight="51.0" prefWidth="200.0" style="-fx-background-radius: 20;" text="Choose_Benchmark">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="SA_pane" layoutX="8.0" layoutY="280.0" prefHeight="285.0" prefWidth="727.0">
+         <children>
+            <TableView fx:id="SA_Table" fixedCellSize="27.0" layoutX="52.0" layoutY="23.0" opacity="0.89" prefHeight="258.0" prefWidth="650.0">
+               <columns>
+                  <TableColumn fx:id="counter" prefWidth="70.0" text="ID" />
+                  <TableColumn fx:id="solution" prefWidth="342.0" text="Solution" />
+                  <TableColumn fx:id="fitness" prefWidth="108.0" text="Fitness" />
+                  <TableColumn fx:id="totalWeight" prefWidth="129.0" text="Weight" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="temp_max" layoutX="231.0" layoutY="72.0" prefHeight="43.0" prefWidth="189.0" promptText="Initial_Temperature">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="temp_min" layoutX="231.0" layoutY="123.0" prefHeight="43.0" prefWidth="189.0" promptText="Final_Temperature">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="alpha" layoutX="231.0" layoutY="225.0" prefHeight="43.0" prefWidth="189.0" promptText="Cooling_rate">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="initial_temp" layoutX="23.0" layoutY="68.0" prefHeight="51.0" prefWidth="165.0" text="Initial_Temperature :" textFill="#242323">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="cool_rate" layoutX="26.0" layoutY="224.0" prefHeight="44.0" prefWidth="130.0" text="Cooling_rate :">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="final_temp" layoutX="23.0" layoutY="119.0" prefHeight="51.0" prefWidth="165.0" text="Final_Temperature :">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="retourSA" layoutX="14.0" layoutY="605.0" mnemonicParsing="false" onAction="#retourSAact" prefHeight="37.0" prefWidth="130.0" text="Return">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="iteration" layoutX="23.0" layoutY="169.0" prefHeight="51.0" prefWidth="211.0" text="Iterrations of one bearing : ">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="nbr_ite" layoutX="231.0" layoutY="173.0" prefHeight="43.0" prefWidth="189.0" promptText="Iterrations of one bearing">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="initialiseSA" layoutX="477.0" layoutY="174.0" mnemonicParsing="false" onAction="#initialiseActSA" prefHeight="51.0" prefWidth="200.0" style="-fx-background-radius: 20;" text="Initialise">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Button>
+   </children>      
+    
+</AnchorPane>

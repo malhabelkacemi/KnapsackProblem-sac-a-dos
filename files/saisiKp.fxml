@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="771.0" stylesheets="@botton.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.SaisiKpController">
+   <children>
+      <ImageView fitHeight="525.0" fitWidth="771.0" pickOnBounds="true">
+         <image>
+            <Image url="@kp.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="32.0" layoutY="147.0" prefHeight="177.0" prefWidth="628.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.0" minWidth="10.0" prefWidth="318.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="225.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="153.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="142.0" text="Capacity:" textFill="#110122">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="49.0" prefHeight="34.0" prefWidth="262.0" text="Number of objects:" textFill="#170101" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="capacity" prefHeight="67.0" prefWidth="277.0" promptText="Enter the capacity" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="27.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nbrObj" layoutX="291.0" layoutY="43.0" prefHeight="67.0" prefWidth="265.0" promptText="Enter the number" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="27.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="next" layoutX="615.0" layoutY="466.0" mnemonicParsing="false" onAction="#NextAction" prefHeight="37.0" prefWidth="142.0" style="-fx-background-radius: 20;" text="Next">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelKp" alignment="CENTER" layoutX="81.0" layoutY="37.0" prefHeight="56.0" prefWidth="610.0" text="Knapsack Problem" textFill="#d7d0bb">
+         <font>
+            <Font name="Bell MT Italic" size="55.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+ nombre d'objets:8
+capacity:1500.0
+objet1,125,25,00
+objet2,600,55,00
+objet3,970,65,00
+objet4,1005,74,00
+objet5,1200,48,00
+objet6,2050,95,00
+objet7,350,90,00
+objet8,1350,102,00

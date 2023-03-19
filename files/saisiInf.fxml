@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="677.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.SaisiInfController">
+   <children>
+      <ImageView fitHeight="677.0" fitWidth="919.0" layoutX="-7.0" pickOnBounds="true">
+         <image>
+            <Image url="@2249512534_1645104279.gif" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="366.0" layoutY="179.0" prefHeight="254.0" prefWidth="518.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="115.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="427.0" minWidth="10.0" prefWidth="325.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="188.0" minHeight="0.0" prefHeight="78.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="181.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="27.0" prefWidth="196.0" text="       Name:">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="29.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="196.0" text="         Value:" textFill="#1e1e1d" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="196.0" text="        Weight:" textFill="#141413" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" alignment="TOP_LEFT" prefHeight="56.0" prefWidth="363.0" promptText="Enter the name" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="27.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="value" prefHeight="53.0" prefWidth="345.0" promptText="Enter the value" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="27.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="weight" prefHeight="57.0" prefWidth="364.0" promptText="Enter the weight " GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="27.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="7.0" prefHeight="65.0" prefWidth="554.0" text="Knapsack Problem" underline="true">
+         <font>
+            <Font name="Bell MT Italic" size="55.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.28888888888888886" centerY="0.6095238095238096" radius="0.5">
+               <stops>
+                  <Stop color="#da0804d9" />
+                  <Stop color="#2f2c2c" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="show" layoutX="734.0" layoutY="433.0" mnemonicParsing="false" onAction="#show_objets" prefHeight="46.0" prefWidth="134.0" text="Show">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="suivant" defaultButton="true" layoutX="717.0" layoutY="14.0" mnemonicParsing="false" onAction="#suiv_fenetre" prefHeight="38.0" prefWidth="183.0" style="-fx-background-color: grey; -fx-background-radius: 25;" text="Return" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="add" layoutX="536.0" layoutY="433.0" mnemonicParsing="false" onAction="#add_objet" prefHeight="46.0" prefWidth="134.0" text="Add">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

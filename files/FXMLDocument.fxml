@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Botton" prefHeight="680.0" prefWidth="908.0" styleClass="botton" stylesheets="@botton.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="692.0" fitWidth="915.0" layoutX="-5.0" layoutY="-5.0" nodeOrientation="INHERIT" opacity="0.8" pickOnBounds="true">
+         <image>
+            <Image url="@ppp.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="label3" alignment="CENTER" layoutX="204.0" layoutY="80.0" prefHeight="73.0" prefWidth="565.0" text="KNAPSACK PROBLEM">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.4380952380952381" endY="0.9190476190476191" startX="0.9285714285714286" startY="0.32380952380952377">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#ff4400" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="suiv" layoutX="324.0" layoutY="424.0" mnemonicParsing="false" onAction="#pourSuivant" prefHeight="48.0" prefWidth="314.0" style="-fx-background-radius: 25; -fx-background-color: grey;" text="Start" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Times New Roman Italic" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="kp" layoutX="324.0" layoutY="486.0" mnemonicParsing="false" onAction="#enonce" prefHeight="48.0" prefWidth="314.0" style="-fx-background-color: grey; -fx-background-radius: 25;" text="What is knapsack problem?" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Times New Roman Italic" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="324.0" layoutY="545.0" mnemonicParsing="false" onAction="#ExitAction" prefHeight="48.0" prefWidth="314.0" style="-fx-background-color: grey; -fx-background-radius: 25;" text="Exit" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Times New Roman Italic" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

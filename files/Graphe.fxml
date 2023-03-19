@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="664.0" prefWidth="1161.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.GrapheController">
+   <children>
+      <ImageView fitHeight="664.0" fitWidth="1175.0" pickOnBounds="true">
+         <image>
+            <Image url="@pngtree-simple-light-blue-solid-background-colorbluelight-bluesolid-backgroundposter-image_49644.jpg" />
+         </image></ImageView>
+      <LineChart fx:id="LineChart2" cache="true" layoutX="593.0" layoutY="189.0" prefHeight="302.0" prefWidth="532.0" title="The fitness results of  GA and SA as a function of the instances" titleSide="BOTTOM">
+         <xAxis>
+            <CategoryAxis fx:id="axe_X2" prefHeight="29.0" prefWidth="662.0" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="axe_y2" label="Fitness" prefHeight="145.0" prefWidth="70.0" side="LEFT" tickLabelFill="#0a0a0a" />
+         </yAxis>
+      </LineChart>
+      <Label layoutX="566.0" layoutY="380.0" prefHeight="17.0" prefWidth="61.0" text="Instances" />
+      <Label layoutX="1111.0" layoutY="380.0" prefHeight="17.0" prefWidth="61.0" text="Instances" />
+      <LineChart fx:id="LineChart1" layoutY="189.0" prefHeight="302.0" prefWidth="577.0" title="The time execution results of  GA and SA as a function of the instances" titleSide="BOTTOM">
+         <xAxis>
+            <CategoryAxis fx:id="axe_X" prefHeight="36.0" prefWidth="614.0" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="axe_Y" label="Time" prefHeight="198.0" prefWidth="73.0" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <Button fx:id="retour" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#retourACT" prefHeight="25.0" prefWidth="104.0" text="Return">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="271.0" layoutY="75.0" prefHeight="39.0" prefWidth="634.0" text="The comparison between SA and GA">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="39.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

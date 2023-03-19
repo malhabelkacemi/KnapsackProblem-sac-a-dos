@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.MetaheuritiquesController">
+   <children>
+      <ImageView fitHeight="663.0" fitWidth="796.0" pickOnBounds="true">
+         <image>
+            <Image url="@gai1903_visuel.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="104.0" layoutY="46.0" prefHeight="50.0" prefWidth="568.0" text="  The metaheuristics to use:" underline="true">
+         <font>
+            <Font name="Footlight MT Light" size="44.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.06190476190476191" endY="1.0" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="run" layoutX="250.0" layoutY="190.0" mnemonicParsing="false" onAction="#runAction" prefHeight="47.0" prefWidth="297.0" style="-fx-background-radius: 27; -fx-background-color: grey;" text="Run with">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="GA" layoutX="27.0" layoutY="342.0" mnemonicParsing="false" onAction="#GAaction" prefHeight="47.0" prefWidth="257.0" text="Genetic algorithm(GA)">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="SA" layoutX="523.0" layoutY="342.0" mnemonicParsing="false" onAction="#SAaction" prefHeight="47.0" prefWidth="244.0" text="Simulated annealing(SA)">
+         <font>
+            <Font name="Arial Narrow Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="retour" layoutX="31.0" layoutY="606.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="36.0" prefWidth="124.0" text="Return">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

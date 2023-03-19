@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="662.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malha_taous.ExistBenchController">
+   <children>
+      <ImageView fitHeight="665.0" fitWidth="783.0" layoutX="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@elec-b.gif" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="existBenPane" layoutX="14.0" layoutY="343.0" prefHeight="261.0" prefWidth="707.0">
+         <children>
+            <TableView fx:id="Pop_Table" fixedCellSize="27.0" layoutX="48.0" layoutY="2.0" opacity="0.89" prefHeight="258.0" prefWidth="672.0">
+               <columns>
+                  <TableColumn fx:id="nb_pop" prefWidth="70.0" text="Nb_pop" />
+                  <TableColumn fx:id="sequence" prefWidth="342.0" text="Sequence" />
+                  <TableColumn fx:id="fitness" prefWidth="53.0" text="Fitness" />
+                  <TableColumn fx:id="poids_seq" prefWidth="64.0" text="Weight" />
+                  <TableColumn fx:id="prob_mut" prefWidth="67.0" text="Prob_mut" />
+                  <TableColumn fx:id="prob_crois" prefWidth="75.0" text="Prob_crois" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="taille_population" layoutX="219.0" layoutY="114.0" prefHeight="43.0" prefWidth="153.0" promptText="Size_population">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nbGener" layoutX="219.0" layoutY="196.0" prefHeight="43.0" prefWidth="153.0" promptText="Number_generations">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="pm" layoutX="419.0" layoutY="113.0" prefHeight="43.0" prefWidth="153.0" promptText="Proba_mutation">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="pc" layoutX="419.0" layoutY="195.0" prefHeight="43.0" prefWidth="153.0" promptText="Proba_crois_over">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="pop_size" layoutX="14.0" layoutY="119.0" prefHeight="34.0" prefWidth="153.0" text="Population size:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="genr" layoutX="10.0" layoutY="201.0" prefHeight="34.0" prefWidth="210.0" text="Number of generations:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="mut" layoutX="586.0" layoutY="118.0" prefHeight="34.0" prefWidth="190.0" text="Mutation Probability">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="cros" layoutX="586.0" layoutY="200.0" prefHeight="34.0" prefWidth="190.0" text="Cross-over Probability">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="1.0" radius="0.5">
+               <stops>
+                  <Stop color="#c4bab10d" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="run" layoutX="405.0" layoutY="285.0" mnemonicParsing="false" onAction="#RunAction" prefHeight="44.0" prefWidth="181.0" style="-fx-background-radius: 20;" text="Run_Benchmark ">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="144.0" layoutY="14.0" prefHeight="50.0" prefWidth="478.0" text="Genetic Algorithm" underline="true">
+         <font>
+            <Font name="Times New Roman" size="46.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.15238095238095234">
+               <stops>
+                  <Stop color="#eb980a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="initialise" layoutX="209.0" layoutY="286.0" mnemonicParsing="false" onAction="#InitialiseAction" prefHeight="43.0" prefWidth="174.0" style="-fx-background-radius: 20;" text="Initialise">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="retour" layoutX="16.0" layoutY="617.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="34.0" prefWidth="115.0" text="Return">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

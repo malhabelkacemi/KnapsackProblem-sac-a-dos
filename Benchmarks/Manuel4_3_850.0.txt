@@ -1,0 +1,5 @@
+ nombre d'objets:3
+capacity:850.0
+object1,1620,96,00
+object2,700,65,00
+object3,2010,112,00
